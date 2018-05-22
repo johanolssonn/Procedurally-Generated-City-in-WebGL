@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> Procedurally Generated City </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<!-- A project by Johan Olsson - Linköping University (TNM084) -->
+
+<script type="text/javascript" src="js/three.js"> </script>
+<script type="text/javascript" src="js/FirstPersonControls.js"> </script>
+<script type="text/javascript" src="js/seededRandom.js"> </script>
+<script type="text/javascript" src="ProGenCity.js"> </script>
+
+<body>
+
+	<div class="GUI" onmouseover="disableControls()" onmouseleave="enableControls()">
+
+
+		<p> Building Density </p>
+		<input type="range" id="density-slider" class="density" min="0" max="5000" step="100" value="1000" oninput="buildCity()">
+
+		<p> Building Height </p>
+		<input type="range" id="height-slider" class="height" min="40" max="300" step="10" value="175" oninput="buildCity()">
+
+		<p> City Awakeness </p>
+		<input type="range" id="awakeness-slider" class="awakeness" min="0" max="1" step="0.05" value="0.7" oninput="texturizeCity()">
+
+	</div>
+
+	<script> 
+
+		var scene, camera, renderer, controls;
+		var buildingLight;
+
+		var cityGeometry;
+
+		// slider input values
+		var awakeness, numberOfBuildings;
+
+		lastTime = performance.now();
+
+		init();
+
+		buildCity();
+
+		render();
+
+		// ----- FUNCTIONS ---- //
+
+		function render() {
+
+			requestAnimationFrame(render);
+
+			var time = performance.now() / 1000;
+
+			controls.update(time - lastTime);
+
+			lastTime = time;
+
+			renderer.render(scene, camera);
+
+
+		}
+
+		function init() {
+
+			scene = new THREE.Scene();
+
+			camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, .1, 1000);
+
+			renderer = new THREE.WebGLRenderer();
+
+			renderer.setSize(window.innerWidth, window.innerHeight);
+
+			document.body.appendChild(renderer.domElement);
+
+			renderer.setClearColor(0x000a1c, 1);
+
+			controls = new THREE.FirstPersonControls(camera, renderer.domElement);
+			controls.movementSpeed = 50.0;
+			controls.lookSpeed = 0.02;
+			controls.lookVertical = true;
+
+			camera.position.y += 250;
+
+		}
+
+		function disableControls() {
+
+			controls.movementSpeed = 0.0;
+			controls.lookSpeed = 0.001;
+
+		}
+
+		function enableControls() {
+
+			controls.movementSpeed = 50.0;
+			controls.lookSpeed = 0.02;
+
+		}
+
+
+	</script>
+
+</body>
+
+</html>

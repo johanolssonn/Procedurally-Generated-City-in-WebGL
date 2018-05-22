@@ -1,0 +1,129 @@
+.GUI {
+
+width: 150px;
+padding: 15px;
+position: fixed;
+bottom: 0;
+text-align: center;
+font-family: sans-serif;
+font-weight: bold;
+color: white;
+border: 2px;
+border-style: solid;
+background-color: transparent;
+
+/*background-blend-mode: overlay;*/
+
+}
+
+
+.density {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+.density::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #2a3f60; 
+    cursor: pointer; /* Cursor on hover */
+}
+
+.density::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #2a3f60; 
+    cursor: pointer; /* Cursor on hover */
+}
+
+
+
+.height {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+.height::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #2a3f60; 
+    cursor: pointer; /* Cursor on hover */
+}
+
+.height::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #2a3f60; 
+    cursor: pointer; /* Cursor on hover */
+}
+
+.button {
+    background-color: #2a3f60; 
+    border: none;
+    /*box-shadow: 5px 5px #000000;*/
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+
+
+}
+
+.button:active {
+  background-color: #1c2b42;
+  box-shadow: 0 3px #666;
+  transform: translateY(2px);
+}
+
+.awakeness {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+.awakeness::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #2a3f60; 
+    cursor: pointer; /* Cursor on hover */
+}
+
+.awakeness::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #2a3f60; 
+    cursor: pointer; /* Cursor on hover */
+}
+
+
+
